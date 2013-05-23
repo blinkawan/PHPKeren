@@ -6,6 +6,10 @@ include_once'SiswaService.php';
 class SiswaServiceImpl implements SiswaService {
     private $daoManager;
     private $siswaDao;
+
+    public function setSiswaDao(SiswaDao $siswaDao){
+        $this->siswaDao=$siswaDao;
+    }
     
     public function __construct() {
         $this->daoManager=new DaoManager();
